@@ -1,0 +1,30 @@
+
+.desc {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+
+  &.desc-reg {
+    font-weight: 400;
+  }
+
+  img {
+    vertical-align: middle;
+    margin: 0 4px;
+  }
+
+  &.desc-min {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &.desc-media {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &.desc-small {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
