@@ -2,33 +2,66 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  @media screen and (max-width: 1023px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   &-2 {
     grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &-4 {
     grid-template-columns: repeat(4, 1fr);
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: repeat(2, 1fr);
+      .list__item {
+        padding: 16px 16px 6px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 18px;
+      .list__item {
+        padding: 16px 16px 6px;
+      }
+    }
   }
 
   &__item {
     padding: 24px 24px 20px;
+    @media screen and (max-width: 1023px) {
+      padding: 16px 16px 28px;
+
+    }
+    @media screen and (max-width: 600px) {
+      padding: 16px 16px 12px;
+    }
     position: relative;
     border-radius: 8px;
     border-bottom: 4px solid transparent;
     background: #fff;
 
-    .desc,
-    .title {
+    .desc  {
       margin-bottom: 16px;
 
       &:nth-last-child(1) {
         margin-bottom: 0;
       }
+
+      @media screen and (max-width: 600px) {
+        margin-bottom: 12px;
+      }
     }
 
     img {
       margin-bottom: 12px;
+      @media screen and (max-width: 1300px) {
+        max-width: 44px;
+        height: 44px;
+      }
     }
   }
 
@@ -51,6 +84,9 @@
     padding: 0;
     margin: 0;
     max-width: 831px;
+    @media screen and (max-width: 1300px) {
+      max-width: 932px;
+    }
   }
 
   &-item {
@@ -79,6 +115,9 @@
 
   &-with-icon {
     margin-top: 16px;
+    @media screen and (max-width: 1300px) {
+      margin-top: 8px;
+    }
 
     .checked-item {
       display: flex;
@@ -120,6 +159,26 @@
 
     &:nth-last-child(1) {
       margin-bottom: 0;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+      line-height: 132%;
+    }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+  .list__icons {
+    img {
+      min-width: 44px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+  .list-small__icons {
+    img {
+      width: 24px;
+      height: 24px;
     }
   }
 }

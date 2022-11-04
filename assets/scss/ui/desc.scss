@@ -3,7 +3,13 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
-
+  @media screen and (max-width: 1300px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+    line-height: 125%;
+  }
   &.desc-reg {
     font-weight: 400;
   }
@@ -11,17 +17,33 @@
   img {
     vertical-align: middle;
     margin: 0 4px;
+    @media screen and (max-width: 600px) {
+      margin: 0 1px;
+    }
   }
 
   &.desc-min {
     font-size: 16px;
     line-height: 24px;
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &.desc-media {
     font-size: 24px;
     line-height: 130%;
-  }
+    @media screen and (max-width: 1300px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 1023px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+    }
+    }
 
   &.desc-small {
     font-size: 14px;
