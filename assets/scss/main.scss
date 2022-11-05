@@ -477,6 +477,8 @@ body {
       }
     }
 
+    @media screen and (max-width: 1300px) {
+    }
     @media screen and (max-width: 1023px) {
       padding: 16px;
       gap: 6px;
@@ -493,6 +495,8 @@ body {
   }
 
   &__img {
+    min-width: 220px;
+
     @media screen and (max-width: 1300px) {
       min-width: 200px;
     }
@@ -3122,4 +3126,34 @@ input {
   &:placeholder {
     color: #848E99;
   }
+}
+.slider-section{
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    &-text{
+      max-width: 797px;
+      letter-spacing: -0.2px;
+      .desc{
+        margin-bottom: 18px;
+        &:nth-last-child(1){
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+.text-nowrap{
+  white-space: nowrap;
+}
+.text-reg{
+  font-weight: 400 !important;
+}
+.section-price__item .desc{
+  max-width: 550px;
 }
