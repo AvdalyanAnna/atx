@@ -9712,14 +9712,15 @@ body {
   .start-trading__text {
     max-width: 807px; } }
 
-@media screen and (max-width: 1300px) {
-  .start-trading__img {
-    min-width: 200px; } }
-
-@media screen and (max-width: 1023px) {
-  .start-trading__img {
-    max-width: 160px;
-    min-width: 160px; } }
+.start-trading__img {
+  min-width: 220px; }
+  @media screen and (max-width: 1300px) {
+    .start-trading__img {
+      min-width: 200px; } }
+  @media screen and (max-width: 1023px) {
+    .start-trading__img {
+      max-width: 160px;
+      min-width: 160px; } }
 
 .learn-profession .title {
   max-width: 569px; }
@@ -11792,3 +11793,28 @@ input {
   line-height: 120%; }
   input:placeholder {
     color: #848E99; }
+
+.slider-section__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  margin-bottom: 24px; }
+  .slider-section__item-text {
+    max-width: 797px;
+    letter-spacing: -0.2px; }
+    .slider-section__item-text .desc {
+      margin-bottom: 18px; }
+      .slider-section__item-text .desc:nth-last-child(1) {
+        margin-bottom: 0; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-reg {
+  font-weight: 400 !important; }
+
+.section-price__item .desc {
+  max-width: 550px; }
