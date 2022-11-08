@@ -6,12 +6,8 @@ $(document).ready(function () {
     $this.parent(parent).toggleClass('active')
     $this.parent(parent).children(show).slideToggle(300)
   })
-  var swiper = new Swiper(".mySwiper", {});
 
-  $(".swiper-button-next").on("click", () => swiper.slideNext());
-
-  $(".swiper-button-prev").on("click", () => swiper.slidePrev());
-  $('.table-head__mobile .table-head').on('click',function (){
+  $('.table-head__mobile .table-head').on('click', function () {
     const $this = $(this),
         element = $this.data('element')
     $this.parent().children().removeClass('active')
@@ -35,4 +31,45 @@ $(document).ready(function () {
       $("body").css("overflow", "auto");
     });
   });
+
+
+  var swiper = new Swiper(".mySwiper", {}),
+      swiper1 = new Swiper(".postSlider-1", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop:true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints:{
+          1024: {
+              spaceBetween: 24,
+          }
+        }
+      }),
+      swiper2 = new Swiper(".postSlider-2", {
+        initialSlide: 2,
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        loop:true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints:{
+          601: {
+              spaceBetween: 30,
+          },
+          1024: {
+              spaceBetween: 24,
+          }
+        }
+      });
+  $(".swiper-button-next-3").on("click", () => swiper.slideNext());
+  $(".swiper-button-prev-3").on("click", () => swiper.slidePrev());
+  $(".swiper-button-next-postSlider-1").on("click", () => swiper1.slideNext());
+  $(".swiper-button-prev-postSlider-1").on("click", () => swiper1.slidePrev());
+  $(".swiper-button-next-postSlider-2").on("click", () => swiper2.slideNext());
+  $(".swiper-button-prev-postSlider-2").on("click", () => swiper2.slidePrev());
 })
