@@ -11749,14 +11749,14 @@ b {
         padding: 24px; } }
     .modal__container .close {
       position: absolute;
-      right: -36px;
-      top: -36px;
+      right: 36px;
+      top: 36px;
       z-index: 9; }
       @media screen and (max-width: 1023px) {
         .modal__container .close {
-          position: fixed;
           top: 16px;
-          right: 16px; } }
+          right: 16px;
+          display: none; } }
     .modal__container .btn {
       width: 100%; }
       @media screen and (max-width: 1023px) {
@@ -11956,3 +11956,67 @@ input {
       left: 10px; }
     .postSlider .swiper-button-next {
       right: 10px; } }
+
+.btn-menu {
+  background: #254288;
+  box-shadow: 0 4.125px 20.625px rgba(30, 27, 173, 0.25);
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 5;
+  left: 24px;
+  bottom: 24px;
+  border: none;
+  outline: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  cursor: pointer; }
+  @media screen and (max-width: 1300px) {
+    .btn-menu {
+      padding: 11px; } }
+  .btn-menu svg {
+    width: 32px;
+    height: 32px; }
+    @media screen and (max-width: 1300px) {
+      .btn-menu svg {
+        width: 22px;
+        height: 22px; } }
+    .btn-menu svg path {
+      fill: none;
+      stroke: #fff;
+      transition: stroke-dasharray 0.6s cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      stroke-dasharray: 60 207;
+      stroke-width: 6; }
+      .btn-menu svg path.line2 {
+        stroke-dasharray: 60 60; }
+  .btn-menu.active .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6; }
+  .btn-menu.active .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6; }
+  .btn-menu.active .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6; }
+
+.menu-list {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  padding: 24px 24px 72px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4.125px 20.625px rgba(30, 27, 173, 0.25); }
+  @media screen and (max-width: 1300px) {
+    .menu-list {
+      padding: 16px 16px 52px; } }
+
+.menu-item {
+  margin-bottom: 8px; }
