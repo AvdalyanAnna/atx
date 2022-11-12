@@ -3072,13 +3072,14 @@ b {
 
     .close {
       position: absolute;
-      right: -36px;
-      top: -36px;
+      right: 36px;
+      top: 36px;
       z-index: 9;
       @media screen and (max-width: 1023px) {
-        position: fixed;
+        //position: fixed;
         top: 16px;
         right: 16px;
+        display: none;
       }
     }
 
@@ -3244,7 +3245,7 @@ input {
       line-height: 19px;
     }
 
-      &.text-red {
+    &.text-red {
       font-weight: 800;
     }
   }
@@ -3272,13 +3273,14 @@ input {
       display: flex;
       gap: 40px;
     }
-&__item{
-  .post-info {
-  &:nth-last-child(1) {
-      margin: 0;
+
+    &__item {
+      .post-info {
+        &:nth-last-child(1) {
+          margin: 0;
+        }
+      }
     }
-  }
-}
   }
 
   &-right {
@@ -3349,3 +3351,74 @@ input {
   }
 }
 
+.btn-menu {
+  background: #254288;
+  box-shadow: 0 4.125px 20.625px rgba(30, 27, 173, 0.25);
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 5;
+  left: 24px;
+  bottom: 24px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @media screen and (max-width: 1300px) {
+    padding: 11px;
+  }
+    svg{
+    width: 32px;
+    height: 32px;
+    @media screen and (max-width: 1300px) {
+      width: 22px;
+      height: 22px;
+    }
+    path{
+      fill: none;
+      stroke: #fff;
+      transition: stroke-dasharray .6s cubic-bezier(.4,0,.2,1),stroke-dashoffset .6s cubic-bezier(.4,0,.2,1);
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+      &.line2 {
+        stroke-dasharray: 60 60;
+      }
+    }
+  }
+  &.active{
+    .line1 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+    .line2 {
+      stroke-dasharray: 1 60;
+      stroke-dashoffset: -30;
+      stroke-width: 6;
+    }
+    .line3 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+  }
+}
+.menu{
+  &-list{
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    padding: 24px 24px 72px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4.125px 20.625px rgba(30, 27, 173, 0.25);
+    @media screen and (max-width: 1300px) {
+      padding: 16px 16px 52px;
+    }
+  }
+  &-item{
+    margin-bottom: 8px;
+  }
+}
