@@ -9104,7 +9104,7 @@ button.swiper-pagination-bullet {
     @media screen and (max-width: 1023px) {
       .title.title-big {
         font-size: 34px;
-        line-height: 106%; } }
+        line-height: 110%; } }
   .title.title-small {
     font-size: 24px;
     line-height: 130%;
@@ -9136,16 +9136,21 @@ button.swiper-pagination-bullet {
   -ms-flex-pack: center;
       justify-content: center;
   padding: 18px 20px;
-  background: linear-gradient(302.76deg, #FFD439 -3.68%, #FA9D1C 13%, #F98816 19.18%, #F65F0A 31.79%, #F44900 81.5%);
+  background: linear-gradient(340.76deg, #FFD439 -3.68%, #FA9D1C 13%, #F98816 19.18%, #F65F0A 31.79%, #F44900 81.5%);
   border-radius: 8px;
   height: 67px;
   font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
+  letter-spacing: 1px;
   line-height: 130%; }
   .btn-full {
     width: 100%; }
+  @media screen and (max-width: 1300px) {
+    .btn {
+      line-height: 28px;
+      height: 64px; } }
   @media screen and (max-width: 1023px) {
     .btn {
       font-size: 22px;
@@ -9394,7 +9399,7 @@ body {
   overflow: hidden; }
   @media screen and (max-width: 1300px) {
     .first-block {
-      min-height: 1120px; } }
+      min-height: 1127px; } }
   @media screen and (max-width: 1023px) {
     .first-block {
       min-height: 1048px; } }
@@ -9459,10 +9464,11 @@ body {
         max-width: 342px; } }
     @media screen and (max-width: 600px) {
       .first-block__left {
-        padding-top: 48px;
+        padding-top: 41px;
         max-width: 100%; }
         .first-block__left .desc.desc-min {
-          max-width: calc(100% - 40px); } }
+          max-width: calc(100% - 40px);
+          letter-spacing: -0.2px; } }
     .first-block__left .title {
       margin: 50px 0 40px;
       max-width: 520px; }
@@ -9474,7 +9480,7 @@ body {
             display: none; } }
       @media screen and (max-width: 1023px) {
         .first-block__left .title {
-          margin: 32px 0 21px; }
+          margin: 32px 0 24px; }
           .first-block__left .title br {
             display: block; } }
       @media screen and (max-width: 600px) {
@@ -9532,7 +9538,8 @@ body {
           right: 0; } }
     .first-block__img img {
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      border-radius: 0 0 8px 8px; }
       @media screen and (max-width: 1300px) {
         .first-block__img img {
           max-height: 433px; } }
@@ -9546,7 +9553,11 @@ body {
         margin: 54px 0 0; } }
     @media screen and (max-width: 600px) {
       .first-block__video {
-        margin: 38px 0 0; } }
+        margin: 38px 0 0; }
+        .first-block__video .element-border .desc {
+          font-size: 16px;
+          line-height: 130%;
+          letter-spacing: -0.2px; } }
     .first-block__video-bg {
       max-width: 640px;
       width: 100%;
@@ -9610,7 +9621,7 @@ body {
       display: flex;
       -ms-flex-align: center;
           align-items: center;
-      gap: 24px; }
+      gap: 20px; }
       @media screen and (max-width: 1300px) {
         .first-block__video .element-border {
           max-width: 511px; } }
@@ -9634,9 +9645,15 @@ body {
 
 .bankruptcy-auction {
   margin: 0 0 80px; }
+  @media screen and (max-width: 1300px) {
+    .bankruptcy-auction {
+      margin: 0 0 27px; } }
   @media screen and (max-width: 1023px) {
     .bankruptcy-auction {
-      margin-bottom: 48px; } }
+      margin-bottom: 40px; } }
+  .bankruptcy-auction b {
+    font-weight: 700;
+    font-size: 110%; }
   .bankruptcy-auction__inner {
     display: -ms-flexbox;
     display: flex;
@@ -9647,20 +9664,37 @@ body {
     gap: 24px; }
   .bankruptcy-auction__left {
     max-width: 546px; }
+    .bankruptcy-auction__left .desc {
+      margin-bottom: 20px; }
+      @media screen and (max-width: 1023px) {
+        .bankruptcy-auction__left .desc {
+          margin-bottom: 16px !important; } }
+      @media screen and (max-width: 600px) {
+        .bankruptcy-auction__left .desc {
+          letter-spacing: -0.2px; } }
     .bankruptcy-auction__left .element-border {
       margin-top: 60px; }
+      .bankruptcy-auction__left .element-border .desc {
+        margin-bottom: 0 !important; }
       @media screen and (max-width: 1300px) {
         .bankruptcy-auction__left .element-border {
           margin-top: 32px; } }
       @media screen and (max-width: 600px) {
         .bankruptcy-auction__left .element-border {
-          margin-top: 23px; } }
+          margin-top: 23px;
+          padding: 13px; }
+          .bankruptcy-auction__left .element-border .desc {
+            font-size: 16px;
+            line-height: 130%; } }
     @media screen and (max-width: 1023px) {
       .bankruptcy-auction__left {
         max-width: 100%; } }
-  @media screen and (max-width: 1023px) {
-    .bankruptcy-auction__right {
-      display: none; } }
+  .bankruptcy-auction__right {
+    margin-right: -45px;
+    margin-top: 40px; }
+    @media screen and (max-width: 1023px) {
+      .bankruptcy-auction__right {
+        display: none; } }
 
 .start-trading .title {
   max-width: 900px; }
@@ -10100,10 +10134,13 @@ body {
       .section-info__mobile {
         display: none; } }
 
+.most-important .title.title-small {
+  margin-bottom: 16px; }
+
 .most-important .element-border {
   padding: 24px 40px; }
   .most-important .element-border .title, .most-important .element-border .desc {
-    max-width: 878px; }
+    max-width: 851px; }
   .most-important .element-border .desc {
     margin-bottom: 12px; }
     .most-important .element-border .desc:nth-last-child(1) {
@@ -10118,7 +10155,11 @@ body {
     .most-important .element-border {
       padding: 16px; }
       .most-important .element-border .desc {
-        font-size: 16px; } }
+        font-size: 16px;
+        margin-bottom: 16px; }
+      .most-important .element-border .title {
+        font-size: 18px;
+        line-height: 130%; } }
   @media screen and (max-width: 600px) {
     .most-important .element-border {
       padding: 13px; }
@@ -10129,7 +10170,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 60px 24px;
-  margin: 70px 0; }
+  margin: 70px 0 75px; }
   @media screen and (max-width: 1300px) {
     .most-important__list {
       margin: 50px 0 60px;
@@ -11814,7 +11855,8 @@ input {
         margin-bottom: 0; }
 
 .text-nowrap {
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-style: normal; }
 
 .text-reg {
   font-weight: 400 !important; }
