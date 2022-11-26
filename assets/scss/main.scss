@@ -103,7 +103,7 @@ body {
   background-color: #F4F6F8;
   overflow: hidden;
   @media screen and (max-width: 1300px) {
-    min-height: 1120px;
+    min-height: 1127px;
   }
   @media screen and (max-width: 1023px) {
     min-height: 1048px;
@@ -174,10 +174,11 @@ body {
       max-width: 342px;
     }
     @media screen and (max-width: 600px) {
-      padding-top: 48px;
+      padding-top: 41px;
       max-width: 100%;
       .desc.desc-min {
         max-width: calc(100% - 40px);
+        letter-spacing: -0.2px;
       }
     }
 
@@ -193,7 +194,7 @@ body {
         }
       }
       @media screen and (max-width: 1023px) {
-        margin: 32px 0 21px;
+        margin: 32px 0 24px;
         br {
           display: block;
         }
@@ -272,6 +273,7 @@ body {
     img {
       width: 100%;
       object-fit: cover;
+      border-radius: 0 0 8px 8px;
       @media screen and (max-width: 1300px) {
         max-height: 433px;
       }
@@ -288,6 +290,11 @@ body {
     }
     @media screen and (max-width: 600px) {
       margin: 38px 0 0;
+      .element-border .desc {
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: -0.2px;
+      }
     }
 
     &-bg {
@@ -366,7 +373,7 @@ body {
       padding: 24px 40px;
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
       @media screen and (max-width: 1300px) {
         max-width: 511px;
       }
@@ -394,8 +401,16 @@ body {
 
 .bankruptcy-auction {
   margin: 0 0 80px;
+  @media screen and (max-width: 1300px) {
+    margin: 0 0 27px;
+  }
   @media screen and (max-width: 1023px) {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
+  }
+
+  b {
+    font-weight: 700;
+    font-size: 110%;
   }
 
   &__inner {
@@ -408,13 +423,33 @@ body {
   &__left {
     max-width: 546px;
 
+    .desc {
+      margin-bottom: 20px;
+      @media screen and (max-width: 1023px) {
+        margin-bottom: 16px !important;
+      }
+      @media screen and (max-width: 600px) {
+        letter-spacing: -0.2px;
+      }
+    }
+
     .element-border {
       margin-top: 60px;
+
+      .desc {
+        margin-bottom: 0 !important;
+      }
+
       @media screen and (max-width: 1300px) {
         margin-top: 32px;
       }
       @media screen and (max-width: 600px) {
         margin-top: 23px;
+        padding: 13px;
+        .desc {
+          font-size: 16px;
+          line-height: 130%;
+        }
       }
     }
 
@@ -423,8 +458,10 @@ body {
     }
   }
 
-  @media screen and (max-width: 1023px) {
-    &__right {
+  &__right {
+    margin-right: -45px;
+    margin-top: 40px;
+    @media screen and (max-width: 1023px) {
       display: none;
     }
   }
@@ -1030,11 +1067,14 @@ body {
 }
 
 .most-important {
+  .title.title-small{
+    margin-bottom: 16px;
+  }
   .element-border {
     padding: 24px 40px;
 
     .title, .desc {
-      max-width: 878px;
+      max-width: 851px;
     }
 
     .desc {
@@ -1058,6 +1098,11 @@ body {
       padding: 16px;
       .desc {
         font-size: 16px;
+        margin-bottom: 16px;
+      }
+      .title{
+        font-size: 18px;
+        line-height: 130%;
       }
     }
     @media screen and (max-width: 600px) {
@@ -1072,7 +1117,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 60px 24px;
-    margin: 70px 0;
+    margin: 70px 0 75px;
     @media screen and (max-width: 1300px) {
       margin: 50px 0 60px;
       grid-gap: 46px 24px;
@@ -3160,6 +3205,7 @@ input {
 
 .text-nowrap {
   white-space: nowrap;
+  font-style: normal;
 }
 
 .text-reg {
@@ -3369,35 +3415,41 @@ input {
   @media screen and (max-width: 1300px) {
     padding: 11px;
   }
-    svg{
+
+  svg {
     width: 32px;
     height: 32px;
     @media screen and (max-width: 1300px) {
       width: 22px;
       height: 22px;
     }
-    path{
+
+    path {
       fill: none;
       stroke: #fff;
-      transition: stroke-dasharray .6s cubic-bezier(.4,0,.2,1),stroke-dashoffset .6s cubic-bezier(.4,0,.2,1);
+      transition: stroke-dasharray .6s cubic-bezier(.4, 0, .2, 1), stroke-dashoffset .6s cubic-bezier(.4, 0, .2, 1);
       stroke-dasharray: 60 207;
       stroke-width: 6;
+
       &.line2 {
         stroke-dasharray: 60 60;
       }
     }
   }
-  &.active{
+
+  &.active {
     .line1 {
       stroke-dasharray: 90 207;
       stroke-dashoffset: -134;
       stroke-width: 6;
     }
+
     .line2 {
       stroke-dasharray: 1 60;
       stroke-dashoffset: -30;
       stroke-width: 6;
     }
+
     .line3 {
       stroke-dasharray: 90 207;
       stroke-dashoffset: -134;
@@ -3405,8 +3457,9 @@ input {
     }
   }
 }
-.menu{
-  &-list{
+
+.menu {
+  &-list {
     position: fixed;
     bottom: 24px;
     left: 24px;
@@ -3418,7 +3471,8 @@ input {
       padding: 16px 16px 52px;
     }
   }
-  &-item{
+
+  &-item {
     margin-bottom: 8px;
   }
 }
