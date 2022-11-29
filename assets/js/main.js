@@ -36,20 +36,22 @@ $(document).ready(function () {
   var swiper = new Swiper(".mySwiper", {}),
       swiper1 = new Swiper(".postSlider-1", {
         slidesPerView: "auto",
-        spaceBetween: 30,
+        spaceBetween: 16,
         loop:true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
         breakpoints:{
+          601: {
+            spaceBetween: 30,
+          },
           1024: {
-              spaceBetween: 24,
+            spaceBetween: 24,
           }
         }
       }),
       swiper2 = new Swiper(".postSlider-2", {
-        initialSlide: 2,
         slidesPerView: "auto",
         spaceBetween: 16,
         loop:true,
@@ -101,4 +103,27 @@ $(document).ready(function () {
     $('.menu-list').toggle(300)
 
   });
+  $('.section-option_show').on("click", function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+    var target = 'section-option',
+        menu = target;
+    $target = $('#section-option');
+    $("html, body")
+        .stop()
+        .animate(
+            {
+              scrollTop: $target.offset().top + 2,
+            },
+            500,
+            "swing",
+            function () {
+              window.location.hash = target;
+            }
+        );
+    $('.btn-menu').toggleClass('active')
+    $('.menu-list').toggle(300)
+
+  });
+
 })
